@@ -38,7 +38,36 @@ def register_eur_to_usd(values):
     return register
 
 
-def valid_input(value):
-    if value.isalpha():
-        return "Not a proper value. "
+# attempting to validate the user's input :(
 
+'''def valid_input(values):
+    for value in values:
+        if value.isnumeric():
+            if value > 0:
+                return value
+        else:
+            return "Not a proper value. "
+
+
+def proper_input(values):
+        for value in values:
+        try:
+            return value
+        except ValueError:
+            if str(value).isalpha():
+                return "not a proper input"
+            elif len(str(value)) == 0:
+                return "not a proper input"'''
+
+
+def proper_input(values):
+    while True:
+        for value in values:
+            if not int(value):
+                print("not a proper input")
+                continue
+            elif int(value) <= 0:
+                print("not a proper input")
+                continue
+            else:
+                return value

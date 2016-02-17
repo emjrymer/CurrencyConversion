@@ -60,3 +60,5 @@ while True:
         print("You have chosen USD")
     else:
         "Enter USD or EUR"
+
+# http://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response
